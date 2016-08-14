@@ -5,24 +5,30 @@ package com.example.android.quakereport;
  */
 public class Earthquake {
     protected double mMagnitude;
-    protected String mCity;
-    protected String mDate;
+    protected String mLocation;
+    protected long mDate;
+    protected String mUrl;
 
-    public Earthquake(double magnitude, String city, String date) {
+    public Earthquake(double magnitude, String location, long date, String url) {
         mMagnitude = magnitude;
-        mCity = city;
+        mLocation = location;
         mDate = date;
+        mUrl = url;
     }
 
     public double getMagnitude() {
         return mMagnitude;
     }
 
-    public String getCity() {
-        return mCity;
+    public String getLocation() {
+        return mLocation;
     }
 
-    public String getDate() {
+    public long getDate() {
         return mDate;
+    }
+
+    public String getUrl() {
+        return mUrl;
     }
 }
